@@ -9,12 +9,11 @@ def is_player_win(human, comp):
 
 
 def rock_paper_sicssor():
-    # Get computer choice
-    comp = random.choice(['r', 'p', 's'])
     type = {'r': 'rock', 'p': 'paper', 's': 'scissor'}
     again = True
 
     while again:
+        comp = random.choice(['r', 'p', 's'])  # Get computer choice
         player = None
         # Get player choice and check player input
         while player not in ['r', 'p', 's']:
@@ -38,6 +37,7 @@ def rock_paper_sicssor():
         answer = input("\nDo you want to play again? Yes (y) || No (please type any character): ").lower()
         if answer != 'y':
             again = False
+
 
 if __name__ == "__main__":
     rock_paper_sicssor()
